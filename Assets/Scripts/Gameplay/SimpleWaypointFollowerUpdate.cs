@@ -1,7 +1,6 @@
 // SimpleWaypointFollowerUpdate.cs
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
 public class SimpleWaypointFollowerUpdate : MonoBehaviour
 {
     [Header("Waypoints")]
@@ -35,10 +34,10 @@ public class SimpleWaypointFollowerUpdate : MonoBehaviour
 
         // look toward target
         if (dir != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), 0.1f);
 
         // feed real speed to animator
-        _anim.SetFloat("Blend", step / Time.deltaTime); // == baseSpeed * speedMultiplier
+        _anim.SetFloat("Blend", step / Time.deltaTime / 5); // == baseSpeed * speedMultiplier
 
         // reached waypoint?
         if (transform.position == target)
