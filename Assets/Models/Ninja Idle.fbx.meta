@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2cdb8efc6784a7c488b2b615f66395a1
+guid: c714975993a909c41a76d698478d1eb6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -35,7 +35,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 53
+      lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
